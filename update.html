@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Update Order</h1>
+
+<button onclick="goHome()">
+    Back
+</button>
+
+<br><br>
+
+<label>Set</label>
+<select id="updateSet">
+    <option>Select Set</option>
+</select>
+
+<hr>
+
+<h2>Search Order</h2>
+
+<label>Seller</label>
+<select id="sellerFilter">
+    <option value="All">All</option>
+    <option value="Plak">Plak</option>
+    <option value="Mint">Mint</option>
+    <option value="Biw">Biw</option>
+    <option value="Ming">Ming</option>
+</select>
+
+<label>Customer Name</label>
+<input
+    id="customerFilter"
+    type="text"
+    placeholder="Partial name">
+
+<button onclick="searchOrders()">
+    Search
+</button>
+
+<hr>
+
+<div id="searchResult"></div>
+
+<hr>
+
+<div id="orderEditor" class="hidden">
+
+    <!-- Filled by update.js -->
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/update.js"></script>
+
+<script>
+loadSets("updateSet");
+</script>
+
+</body>
+</html>

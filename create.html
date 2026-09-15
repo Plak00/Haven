@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Create Order</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>Haven TCG Pre-order System</h1>
+
+
+<div class="toolbar">
+
+<label>
+Select Set
+</label>
+
+
+<select id="orderSet">
+
+<option>Select Set</option>
+
+</select>
+
+
+<button onclick="loadProducts('orderSet','productArea')">
+Load Products
+</button>
+
+
+</div>
+
+
+
+<h2>
+Products
+</h2>
+
+
+<div id="productArea">
+
+</div>
+
+
+
+<h2>
+Customer Information
+</h2>
+
+
+<div class="order-form">
+
+
+<label for="customer">
+Customer
+</label>
+
+<input 
+id="customer"
+placeholder="Customer name">
+
+
+
+<label for="totalPrice">
+Total Price
+</label>
+
+<input
+id="totalPrice"
+type="number"
+placeholder="Total price">
+
+
+
+<label for="deposit">
+Deposit
+</label>
+
+<input 
+id="deposit"
+type="number"
+placeholder="Deposit">
+
+
+
+<label for="receive">
+Receive Method
+</label>
+
+<select id="receive">
+
+<option value="Pick Up">
+Pick Up
+</option>
+
+<option value="Delivery">
+Delivery
+</option>
+
+
+<option value="For me">
+For me
+</option>
+
+
+</select>
+
+
+<div id="pickupArea" class="hidden">
+
+    <label>Pickup Location</label>
+
+    <select id="pickupLocation">
+
+        <option value="Haven TCG">Haven TCG</option>
+
+        <option value="Other">Other</option>
+
+    </select>
+
+</div>
+
+<div id="pickupOtherArea" class="hidden">
+
+    <label>Pickup Details</label>
+
+    <input
+        id="pickupOther"
+        placeholder="Example: Mega Bangna">
+
+</div>
+
+<div id="addressArea" class="hidden">
+
+<label for="address">
+Address
+</label>
+
+<textarea
+id="address"
+placeholder="Address">
+</textarea>
+
+</div>
+
+
+
+<label for="seller">
+Seller
+</label>
+
+<select id="seller">
+
+<option value="">
+Select Seller
+</option>
+
+<option value="Plak">
+Plak
+</option>
+
+<option value="Mint">
+Mint
+</option>
+
+<option value="Biw">
+Biw
+</option>
+
+<option value="Ming">
+Ming
+</option>
+
+</select>
+
+
+</div>
+
+
+<div class="bottom-actions">
+
+<button id="createOrderButton" onclick="createOrder()">
+Create Order
+</button>
+
+
+<button onclick="goHome()">
+Back
+</button>
+
+</div>
+
+
+
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/create.js"></script>
+
+<script>
+
+loadSets("orderSet");
+
+</script>
+
+
+</body>
+
+</html>
